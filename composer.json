@@ -1,0 +1,19 @@
+{
+    "name": "sebwite/magento2-sentry",
+    "description": "Magento 2.0 Logger for Sentry",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0",
+        "magento/magento-composer-installer": "*",
+        "raven/raven": "0.9.*"
+    },
+    "autoload": {
+        "psr-4": { "Sebwite\\Sidebar\\": "" },
+        "files": [ "registration.php" ]
+    }
+}
