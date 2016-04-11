@@ -18,9 +18,9 @@ This extension will add the ability to log to [Sentry](https://github.com/getsen
 ## Configuration
 * Add the variable 'raven_dns' to your app/etc/env.php file. Example:
 
-`
-  'raven_dns' => 'https://****@sentry.domain.com/8',
-`
+```
+'raven_dns' => 'https://****@sentry.domain.com/8',
+```
 
 ---
 [![Alt text](https://www.sebwite.nl/wp-content/themes/sebwite/assets/images/logo-sebwite.png "Sebwite.nl")](https://sebwite.nl)
