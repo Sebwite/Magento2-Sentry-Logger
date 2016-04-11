@@ -23,4 +23,5 @@ This extension will add the ability to log to [Sentry](https://github.com/getsen
 `
 
 ---
+
 [![Alt text](https://www.sebwite.nl/wp-content/themes/sebwite/assets/images/logo-sebwite.png "Sebwite.nl")](https://sebwite.nl)
