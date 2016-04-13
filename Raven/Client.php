@@ -13,10 +13,14 @@ class Client extends Raven_Client
 {
     public function __construct()
     {
-        $env = include $_SERVER['DOCUMENT_ROOT'] . '/../app/etc/env.php';
+        $ravenDNS = null;
+        $options  = [ ];
 
-        $options = [];
-        $ravenDNS = array_key_exists('raven_dns', $env) ? $env['raven_dns'] : null;
+        if ( php_sapi_name() !== 'cli')
+        {
+            $env      = include $_SERVER[ 'DOCUMENT_ROOT' ] . '/../app/etc/env.php';
+            $ravenDNS = array_key_exists('raven_dns', $env) ? $env[ 'raven_dns' ] : null;
+        }
 
         parent::__construct($ravenDNS, $options);
     }
