@@ -13,7 +13,7 @@
         "raven/raven": "0.9.*"
     },
     "autoload": {
-        "psr-4": { "Sebwite\\Sidebar\\": "" },
+        "psr-4": { "Sebwite\\Sentry\\": "" },
         "files": [ "registration.php" ]
     }
 }
