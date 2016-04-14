@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <type name="\Monolog\Handler\RavenHandler">
-        <arguments>
-            <argument name="ravenClient" xsi:type="object">\Sebwite\Sentry\Raven\Client</argument>
-            <argument name="level" xsi:type="object">300</argument>
-        </arguments>
-    </type>
     <type name="Magento\Framework\Logger\Monolog">
         <arguments>
             <argument name="handlers" xsi:type="array">
                 <item name="system" xsi:type="object">\Monolog\Handler\RavenHandler</item>
             </argument>
+        </arguments>
+    </type>
+    <type name="Monolog\Handler\RavenHandler">
+        <arguments>
+            <argument name="ravenClient" xsi:type="object">\Sebwite\Sentry\Raven\Client</argument>
+            <argument name="level" xsi:type="string">300</argument>
         </arguments>
     </type>
 </config>
