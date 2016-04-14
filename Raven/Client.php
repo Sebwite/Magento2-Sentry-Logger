@@ -19,7 +19,12 @@ class Client extends Raven_Client
         if ( php_sapi_name() !== 'cli')
         {
             $env      = include $_SERVER[ 'DOCUMENT_ROOT' ] . '/../app/etc/env.php';
-            $ravenDNS = array_key_exists('raven_dns', $env) ? $env[ 'raven_dns' ] : null;
+            $isDeveloper = array_key_exists('MAGE_MODE', $env) && $env['MAGE_MODE'] === 'developer';
+
+            // Only log to Sentry if the use is not in development mode
+            if( ! $isDeveloper) {
+                $ravenDNS = array_key_exists('raven_dns', $env) ? $env[ 'raven_dns' ] : null;
+            }
         }
 
         parent::__construct($ravenDNS, $options);
