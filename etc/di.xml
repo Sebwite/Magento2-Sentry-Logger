@@ -3,12 +3,12 @@
     <type name="Magento\Framework\Logger\Monolog">
         <arguments>
             <argument name="handlers" xsi:type="array">
-                <item name="raven" xsi:type="object">\Monolog\Handler\RavenHandler</item>
+                <item name="raven" xsi:type="object">Sebwite\Sentry\Raven\Handler</item>
                 <item name="system" xsi:type="object">Magento\Framework\Logger\Handler\System</item>
             </argument>
         </arguments>
     </type>
-    <type name="Monolog\Handler\RavenHandler">
+    <type name="Sebwite\Sentry\Raven\Handler">
         <arguments>
             <argument name="ravenClient" xsi:type="object">\Sebwite\Sentry\Raven\Client</argument>
             <argument name="level" xsi:type="string">300</argument>
