@@ -12,7 +12,7 @@ use Monolog\Handler\RavenHandler;
 
 class Handler extends RavenHandler
 {
-    public function __construct($ravenClient, $level, $bubble)
+    public function __construct(Raven_Client $ravenClient, $level = Logger::DEBUG, $bubble = true)
     {
         if ( is_array($ravenClient) && array_key_exists('instance', $ravenClient) )
         {
