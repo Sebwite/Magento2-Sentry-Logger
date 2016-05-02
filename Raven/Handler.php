@@ -9,6 +9,7 @@
 namespace Sebwite\Sentry\Raven;
 
 use Monolog\Handler\RavenHandler;
+use Raven_Client;
 
 class Handler extends RavenHandler
 {
