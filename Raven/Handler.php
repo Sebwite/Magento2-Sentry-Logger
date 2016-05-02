@@ -9,11 +9,11 @@
 namespace Sebwite\Sentry\Raven;
 
 use Monolog\Handler\RavenHandler;
-use Client as Raven_Client;
+use Raven_Client;
 
 class Handler extends RavenHandler
 {
-    public function __construct(Raven_Client $ravenClient, $level = Logger::DEBUG, $bubble = true)
+    public function __construct($ravenClient, $level = Logger::DEBUG, $bubble = true)
     {
 
         if ( is_array($ravenClient) && array_key_exists('instance', $ravenClient) )
