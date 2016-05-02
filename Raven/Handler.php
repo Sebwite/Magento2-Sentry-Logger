@@ -1,12 +1,4 @@
-<?php
-/**
- * Part of the Sebwite PHP packages.
- *
- * License and copyright information bundled with this package in the LICENSE file
- */
-
-
-namespace Sebwite\Sentry\Raven;
+<?php namespace Sebwite\Sentry\Raven;
 
 use Monolog\Handler\RavenHandler;
 use Monolog\Logger;
