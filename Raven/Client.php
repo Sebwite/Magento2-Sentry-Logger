@@ -26,7 +26,7 @@ class Client extends Raven_Client
             }
             else
             {
-                include $root . '/../app/etc/env.php';;
+                $env = include $root . '/../app/etc/env.php';;
             }
 
             $isDeveloper = array_key_exists('MAGE_MODE', $env) && $env[ 'MAGE_MODE' ] === 'developer';
