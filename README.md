@@ -3,7 +3,7 @@
 This extension will add the ability to log to [Sentry](https://github.com/getsentry/). Default for the minimal logging level is DEBUG, this is set in the extensions di.xml.
 
 ## Installation with composer
-* Include the repository: `composer require sebwite/magento2-sentry-logger`
+* Include the repository: `composer require sebwite/magento2-sentry`
 * Enable the extension: `php bin/magento --clear-static-content module:enable Sebwite_Sentry`
 * Upgrade db scheme: `php bin/magento setup:upgrade`
 * Clear cache
